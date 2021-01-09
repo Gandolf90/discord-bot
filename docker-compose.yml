@@ -1,0 +1,13 @@
+version: "3.2"
+
+services:
+  bot:
+    container_name: discord_bot
+    image: phasecorex/red-discordbot
+    volumes:
+      - ./data:/data
+    environment:
+      -  TOKEN=${TOKEN}
+      -  PREFIX=${PREFIX}
+      -  TZ=${TZ}
+    restart: always
